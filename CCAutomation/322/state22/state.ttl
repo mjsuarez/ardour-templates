@@ -1,0 +1,18 @@
+@prefix atom: <http://lv2plug.in/ns/ext/atom#> .
+@prefix lv2: <http://lv2plug.in/ns/lv2core#> .
+@prefix pset: <http://lv2plug.in/ns/ext/presets#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix state: <http://lv2plug.in/ns/ext/state#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<>
+	a pset:Preset ;
+	lv2:appliesTo <https://distrho.kx.studio/plugins/cardinal#synth> ;
+	state:state [
+		<https://distrho.kx.studio/plugins/cardinal#synth#screenshot> "" ;
+		<https://distrho.kx.studio/plugins/cardinal#synth#comment> "" ;
+		<urn:distrho:patch> "KLUv/QBI9SEAxvaXIyBP7IzSRaLon8tnYQnsKx5AbFMBge6KEGXRn0DbBBIJACsGjQCNAJAAijHH3r1f7tfOwU42QFVVOdp7b/aw3dlfv6QDVFVVgyprYiQIRGFpIhFLVTnc2/buHmz/y25dsqqsR8qLpaoczIxMqqyFqYgSNJeqcixOWtJLlQXJRoowFUtVYaw2nGPMz1rj9r+7DUhKE4nEY4qRQLKN3UYkTtJsuDbcMberz5zx+6+zbkPdud1tCCQBjW0v72OmmeDQvbeuvx/6/lNlLc1SDsoBW0YrIh35WKqM5ESIKmua8uGR8mIpK05xWQ6qfr2x3oTZwfbWXNvdbbBlbH9jZm8fhND7v5NVZTHTiRVLVfWJkRhtUziRIcBhFvks2SwzRsiBpcqCmojpRA5ucB9j5tyvP2uqrKVZqqqqCkNinLnIZ6kqh4NqkjxwItQskUjQGSt65sRSZTGLfB6iZ04sVdY0I6h5sHBkpIoba//3zzU7dA8uzVrY3LY5v2vIrymcyMCafTfm5+2utaty/M7aMXzOWEPGLOkAphzNy0TyseDECWKeuEDT4H2/Z+vs2/Bbe02VVPF4iIAaiccUHfausfd+xuxwW5W1IDDOXGTCJBHRRFS5d+UIGcpBVS03ZuasPYfMrp9jvt3+nyHstu+fu78H3TNmreEud2vPvBs2exBIu3vmxvo192Ntn8G32iGQFwEW1EDNWhCmGU1Tzmia0h17Dq5Dxs+9g4iPfa5qmtJhIChKEEwzghoIyVEOZpEJTPRITFI+kqrd3d3dfWZmZlWGz72qqurjAWEcAgKEAoSEKYDXqDFFhmAGBAAAQIKABOACAJGhcRsSgIAACiSBDsYoxgiUMkQAiENGECIACMrIqCYIe/TvIBBq2olbwlopYyjEDLoJzSnItJECHzBjA28CW9pumueU1hUCkiOmgDpz6kHh3+CLhg34+i6PLK1HDgbAspGXiiA1gp6JhNKwMEzq/upPevZncNwZE1kueP9dI4pIku4+gODJvcrkKSGZUAl0CvmDFxANp8FpOI1o/DX0k7RFZQILyhTFJf5DUOKhuDhvAngERNBQxp7eNRcDmcCV/E9uz+jjf0SDpGHXxWGyfCHsAoaH6FiqDduzjORpgJd5u9toakfwKqV5aUJrqV/wQM1vPrQEMYDYjbt6J87E5roqoaU/8sjqtXo9VpYrqZdsECw4OE1AAhL0VWcaAsss64liadttzgsfeIbkbTcWkXURbDYQskqR8bqjPf8wRRKp5RVM+eNV5miCYSJw1Q5Yw1RbweECDsf8RswAOKYJQAQBoON9r1IRJWD4oeAiPyrQHxNw0h58KF4nSakPS7KDjAEXa5+RLDYKeFhKIZYgByKpPV8pAEduyaEdbO5KEYYAET19ifQX2QdJupPQyWCM0wCEn+d6mE1UG8k5mPEz5OgD3SuekIh1Pzgo" ;
+		<urn:distrho:windowSize> "1228:666"
+	] .
+

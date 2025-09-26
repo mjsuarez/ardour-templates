@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Session version="7003" id-counter="1345" rg-counter="9" name-counter="1" event-counter="58752" vca-counter="1">
+  <ProgramVersion created-with="Ardour 8.12" modified-with="Ardour 8.12"/>
+  <MIDIPorts>
+    <Port name="Cue Control in" type="midi" direction="Input"/>
+    <Port name="MIDI Clock out" type="midi" direction="Output"/>
+    <Port name="MMC in" type="midi" direction="Input"/>
+    <Port name="MMC out" type="midi" direction="Output"/>
+    <Port name="MTC out" type="midi" direction="Output"/>
+    <Port name="Scene in" type="midi" direction="Input"/>
+    <Port name="Scene out" type="midi" direction="Output"/>
+    <Port name="x-virtual-keyboard" type="midi" direction="Output"/>
+  </MIDIPorts>
+  <Config>
+    <Option name="use-region-fades" value="1"/>
+    <Option name="use-transport-fades" value="1"/>
+    <Option name="use-monitor-fades" value="1"/>
+    <Option name="native-file-data-format" value="FormatFloat"/>
+    <Option name="native-file-header-format" value="WAVE"/>
+    <Option name="auto-play" value="0"/>
+    <Option name="auto-return" value="0"/>
+    <Option name="auto-input" value="1"/>
+    <Option name="triggerbox-overrides-disk-monitoring" value="1"/>
+    <Option name="cue-behavior" value="FollowCues"/>
+    <Option name="punch-in" value="0"/>
+    <Option name="punch-out" value="0"/>
+    <Option name="count-in" value="1"/>
+    <Option name="session-monitoring" value=""/>
+    <Option name="record-mode" value="RecLayered"/>
+    <Option name="draw-opaque-midi_regions" value="0"/>
+    <Option name="subframes-per-frame" value="100"/>
+    <Option name="timecode-format" value="timecode_30"/>
+    <Option name="minitimeline-span" value="120"/>
+    <Option name="track-name-number" value="0"/>
+    <Option name="track-name-take" value="1"/>
+    <Option name="take-name" value="Take4"/>
+    <Option name="jack-time-master" value="1"/>
+    <Option name="use-video-sync" value="0"/>
+    <Option name="video-pullup" value="0"/>
+    <Option name="external-sync" value="0"/>
+    <Option name="insert-merge-policy" value="InsertMergeRelax"/>
+    <Option name="timecode-offset" value="0"/>
+    <Option name="timecode-offset-negative" value="1"/>
+    <Option name="slave-timecode-offset" value=" 00:00:00:00"/>
+    <Option name="timecode-generator-offset" value=" 00:00:00:00"/>
+    <Option name="midi-copy-is-fork" value="1"/>
+    <Option name="tracks-follow-session-time" value="0"/>
+    <Option name="realtime-export" value="0"/>
+    <Option name="use-surround-master" value="0"/>
+    <Option name="use-video-file-fps" value="0"/>
+    <Option name="videotimeline-pullup" value="1"/>
+    <Option name="wave-amplitude-zoom" value="0"/>
+    <Option name="wave-zoom-factor" value="2"/>
+    <Option name="show-summary" value="1"/>
+    <Option name="show-group-tabs" value="1"/>
+    <Option name="show-region-fades" value="1"/>
+    <Option name="show-busses-on-meterbridge" value="0"/>
+    <Option name="show-master-on-meterbridge" value="1"/>
+    <Option name="show-midi-on-meterbridge" value="1"/>
+    <Option name="show-rec-on-meterbridge" value="1"/>
+    <Option name="show-mute-on-meterbridge" value="0"/>
+    <Option name="show-solo-on-meterbridge" value="0"/>
+    <Option name="show-monitor-on-meterbridge" value="0"/>
+    <Option name="show-name-on-meterbridge" value="1"/>
+    <Option name="show-fader-on-meterbridge" value="0"/>
+    <Option name="meterbridge-label-height" value="0"/>
+    <Option name="show-master-bus-comment-on-load" value="0"/>
+    <Option name="default-time-domain" value="BeatTime"/>
+  </Config>
+  <Metadata/>
+  <Sources/>
+  <TriggerBindings/>
+  <Regions/>
+  <Locations>
+    <Location id="1347" name="session" start="b0" end="b0" flags="IsSessionRange" locked="0" timestamp="1758926686" cue="0"/>
+  </Locations>
+  <Bundles/>
+  <VCAManager/>
+  <Routes>
+    <Route version="7003" id="71" name="Master" default-type="audio" strict-io="1" volume-applies-to-output="1" active="1" denormal-protection="0" meter-point="MeterOutput" disk-io-point="DiskIOPreFader" meter-type="MeterK14">
+      <ProgramVersion created-with="Ardour 8.12" modified-with="Ardour 8.12"/>
+      <PresentationInfo order="0" flags="MasterOut,OrderSet" color="2855877119"/>
+      <Controllable name="solo" id="79" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="85" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
+      <Controllable name="solo-safe" id="87" flags="Toggle" value="0" solo-safe="0"/>
+      <IO name="Master" id="99" direction="Input" default-type="audio">
+        <Port name="Master/audio_in 1" type="audio" direction="Input">
+          <Connection other="CCConsumer/audio_out 1"/>
+          <Connection other="CCProducer/audio_out 1"/>
+        </Port>
+        <Port name="Master/audio_in 2" type="audio" direction="Input">
+          <Connection other="CCConsumer/audio_out 2"/>
+          <Connection other="CCProducer/audio_out 2"/>
+        </Port>
+      </IO>
+      <IO name="Master" id="100" direction="Output" default-type="audio">
+        <Port name="Master/audio_out 1" type="audio" direction="Output">
+          <Connection other="Monitor/audio_in 1"/>
+        </Port>
+        <Port name="Master/audio_out 2" type="audio" direction="Output">
+          <Connection other="Monitor/audio_in 2"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main,SurroundSend" muted="0"/>
+      <Controllable name="mute" id="81" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="phase" id="83" flags="Toggle" value="0" phase-invert="00"/>
+      <Controllable name="mastervolume" id="107" flags="GainLike,NotAutomatable" value="1"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="90" flags="" value="0.5"/>
+        <Controllable name="pan-width" id="94" flags="" value="0"/>
+        <Controllable name="pan-elevation" id="92" flags="" value="0"/>
+        <Controllable name="pan-frontback" id="96" flags="" value="0"/>
+        <Controllable name="pan-lfe" id="98" flags="" value="0"/>
+        <Automation>
+          <AutomationList automation-id="pan-azimuth" id="89" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-elevation" id="91" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-width" id="93" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-frontback" id="95" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-lfe" id="97" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+        </Automation>
+      </Pannable>
+      <Processor id="102" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
+      <Processor id="103" name="Amp" active="1" user-latency="0" use-user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="77" flags="GainLike" value="1"/>
+      </Processor>
+      <Processor id="101" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="75" flags="GainLike" value="1"/>
+      </Processor>
+      <Processor id="105" name="Master" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="Master" type="main-outs" role="Main">
+        <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
+      </Processor>
+      <Processor id="104" name="meter-Master" active="1" user-latency="0" use-user-latency="0" type="meter"/>
+      <Slavable/>
+    </Route>
+    <Route version="7003" id="111" name="Monitor" default-type="audio" strict-io="1" active="1" denormal-protection="0" meter-point="MeterOutput" disk-io-point="DiskIOPreFader" meter-type="MeterPeak">
+      <ProgramVersion created-with="Ardour 8.12" modified-with="Ardour 8.12"/>
+      <PresentationInfo order="0" flags="MonitorOut" color="0"/>
+      <Controllable name="solo" id="119" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="125" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
+      <Controllable name="solo-safe" id="127" flags="Toggle" value="0" solo-safe="0"/>
+      <IO name="Monitor" id="128" direction="Input" default-type="audio">
+        <Port name="Monitor/audio_in 1" type="audio" direction="Input">
+          <Connection other="Master/audio_out 1"/>
+          <Connection other="auditioner/audio_out 1"/>
+          <Connection other="auditioner/audio_out 1"/>
+        </Port>
+        <Port name="Monitor/audio_in 2" type="audio" direction="Input">
+          <Connection other="Master/audio_out 2"/>
+          <Connection other="auditioner/audio_out 2"/>
+          <Connection other="auditioner/audio_out 2"/>
+        </Port>
+      </IO>
+      <IO name="Monitor" id="129" direction="Output" default-type="audio">
+        <Port name="Monitor/audio_out 1" type="audio" direction="Output">
+          <ExtConnection for="JACK"/>
+          <ExtConnection for="JACK" other="Scarlett 18i8 2nd Gen Pro:playback_AUX0"/>
+        </Port>
+        <Port name="Monitor/audio_out 2" type="audio" direction="Output">
+          <ExtConnection for="JACK"/>
+          <ExtConnection for="JACK" other="Scarlett 18i8 2nd Gen Pro:playback_AUX1"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main,SurroundSend" muted="0"/>
+      <Controllable name="mute" id="121" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="phase" id="123" flags="Toggle" value="0" phase-invert="00"/>
+      <Processor id="135" name="Monitor Return" active="1" user-latency="0" use-user-latency="0" type="monreturn"/>
+      <Processor id="131" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
+      <Processor id="136" name="MonitorOut" active="1" user-latency="0" use-user-latency="0" type="monitor" dim-level="0.25118863582611084" solo-boost-level="1" cut-all="0" dim-all="0" mono="0" channels="2">
+        <Channel id="0" cut="0" invert="0" dim="0" solo="0"/>
+        <Channel id="1" cut="0" invert="0" dim="0" solo="0"/>
+      </Processor>
+      <Processor id="130" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="115" flags="GainLike" value="1"/>
+      </Processor>
+      <Processor id="134" name="Monitor" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="Monitor" type="main-outs" role="Main"/>
+      <Processor id="133" name="meter-Monitor" active="1" user-latency="0" use-user-latency="0" type="meter"/>
+      <Slavable/>
+    </Route>
+    <Route version="7003" id="212" name="CCProducer" default-type="midi" strict-io="1" active="1" denormal-protection="0" meter-point="MeterPostFader" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" midi-playlist="290" alignment-choice="Automatic" playback-channel-mode="AllChannels" capture-channel-mode="AllChannels" playback-channel-mask="0xffff" capture-channel-mask="0xffff" note-mode="Sustained" step-editing="0" input-active="1" restore-pgm="1">
+      <ProgramVersion created-with="Ardour 8.12" modified-with="Ardour 8.12"/>
+      <PresentationInfo order="1" flags="MidiTrack,OrderSet" color="4289374975"/>
+      <Controllable name="solo" id="253" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="259" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
+      <Controllable name="solo-safe" id="261" flags="Toggle" value="0" solo-safe="0"/>
+      <IO name="CCProducer" id="273" direction="Input" default-type="midi">
+        <Port name="CCProducer/midi_in 1" type="midi" direction="Input">
+          <ExtConnection for="JACK"/>
+        </Port>
+      </IO>
+      <IO name="CCProducer" id="274" direction="Output" default-type="midi">
+        <Port name="CCProducer/audio_out 1" type="audio" direction="Output">
+          <Connection other="Master/audio_in 1"/>
+        </Port>
+        <Port name="CCProducer/audio_out 2" type="audio" direction="Output">
+          <Connection other="Master/audio_in 2"/>
+        </Port>
+        <Port name="CCProducer/midi_out 1" type="midi" direction="Output">
+          <Connection other="MIDI Control In"/>
+          <ExtConnection for="JACK"/>
+          <ExtConnection for="JACK" other="Midi-Bridge:Midi Through:(playback_0) Midi Through Port-0"/>
+        </Port>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main,SurroundSend" muted="0"/>
+      <Controllable name="mute" id="255" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="phase" id="257" flags="Toggle" value="0" phase-invert=""/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="264" flags="" value="0.5"/>
+        <Controllable name="pan-width" id="268" flags="" value="0"/>
+        <Controllable name="pan-elevation" id="266" flags="" value="0"/>
+        <Controllable name="pan-frontback" id="270" flags="" value="0"/>
+        <Controllable name="pan-lfe" id="272" flags="" value="0"/>
+        <Automation>
+          <AutomationList automation-id="pan-azimuth" id="263" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-elevation" id="265" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-width" id="267" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-frontback" id="269" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-lfe" id="271" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+        </Automation>
+      </Pannable>
+      <Processor id="283" name="recorder:CCProducer" active="1" user-latency="0" use-user-latency="0" type="diskwriter" record-safe="0"/>
+      <Processor id="282" name="player:CCProducer" active="1" user-latency="0" use-user-latency="0" type="diskreader"/>
+      <Processor id="215" name="TriggerBox" active="1" user-latency="0" use-user-latency="0" type="triggerbox" data-type="midi" order="0">
+        <Triggers>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="0" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="1" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="2" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="3" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="4" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="5" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="6" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="7" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="8" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="9" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="10" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="11" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="12" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="13" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="14" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="15" segment-tempo="0" start="b0" used-channels="0" channel-map="-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1"/>
+        </Triggers>
+      </Processor>
+      <Processor id="276" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
+      <Processor id="322" name="Cardinal Synth" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="https://distrho.kx.studio/plugins/cardinal#synth" count="1" custom="0">
+        <ConfiguredInput>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="midi" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="midi" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+          <Channelmap type="midi" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0" template-dir="/home/manuel/.config/ardour8/templates/CCAutomation" state-dir="state22">
+          <Port symbol="param_1" value="0"/>
+          <Port symbol="param_2" value="0"/>
+          <Port symbol="param_3" value="0"/>
+          <Port symbol="param_4" value="0"/>
+          <Port symbol="param_5" value="0"/>
+          <Port symbol="param_6" value="0"/>
+          <Port symbol="param_7" value="0"/>
+          <Port symbol="param_8" value="0"/>
+          <Port symbol="param_9" value="0"/>
+          <Port symbol="param_10" value="0"/>
+          <Port symbol="param_11" value="0"/>
+          <Port symbol="param_12" value="0"/>
+          <Port symbol="param_13" value="0"/>
+          <Port symbol="param_14" value="0"/>
+          <Port symbol="param_15" value="0"/>
+          <Port symbol="param_16" value="0"/>
+          <Port symbol="param_17" value="0"/>
+          <Port symbol="param_18" value="0"/>
+          <Port symbol="param_19" value="0"/>
+          <Port symbol="param_20" value="0"/>
+          <Port symbol="param_21" value="0"/>
+          <Port symbol="param_22" value="0"/>
+          <Port symbol="param_23" value="0"/>
+          <Port symbol="param_24" value="0"/>
+          <Port symbol="lv2_enabled" value="1"/>
+          <Port symbol="tooltips" value="1"/>
+          <Port symbol="cableOpacity" value="50"/>
+          <Port symbol="cableTension" value="75"/>
+          <Port symbol="rackBrightness" value="100"/>
+          <Port symbol="haloBrightness" value="25"/>
+          <Port symbol="knobMode" value="0"/>
+          <Port symbol="knobScroll" value="0"/>
+          <Port symbol="knobScrollSensitivity" value="1"/>
+          <Port symbol="lockModules" value="0"/>
+          <Port symbol="rateLimit" value="0"/>
+          <Port symbol="browserSort" value="0"/>
+          <Port symbol="browserZoom" value="50"/>
+          <Port symbol="invertZoom" value="0"/>
+          <Port symbol="squeezeModules" value="1"/>
+        </lv2>
+        <Controllable name="Parameter 1" id="324" flags="" value="0" parameter="4" symbol="param_1"/>
+        <Controllable name="Parameter 2" id="326" flags="" value="0" parameter="5" symbol="param_2"/>
+        <Controllable name="Parameter 3" id="328" flags="" value="0" parameter="6" symbol="param_3"/>
+        <Controllable name="Parameter 4" id="330" flags="" value="0" parameter="7" symbol="param_4"/>
+        <Controllable name="Parameter 5" id="332" flags="" value="0" parameter="8" symbol="param_5"/>
+        <Controllable name="Parameter 6" id="334" flags="" value="0" parameter="9" symbol="param_6"/>
+        <Controllable name="Parameter 7" id="336" flags="" value="0" parameter="10" symbol="param_7"/>
+        <Controllable name="Parameter 8" id="338" flags="" value="0" parameter="11" symbol="param_8"/>
+        <Controllable name="Parameter 9" id="340" flags="" value="0" parameter="12" symbol="param_9"/>
+        <Controllable name="Parameter 10" id="342" flags="" value="0" parameter="13" symbol="param_10"/>
+        <Controllable name="Parameter 11" id="344" flags="" value="0" parameter="14" symbol="param_11"/>
+        <Controllable name="Parameter 12" id="346" flags="" value="0" parameter="15" symbol="param_12"/>
+        <Controllable name="Parameter 13" id="348" flags="" value="0" parameter="16" symbol="param_13"/>
+        <Controllable name="Parameter 14" id="350" flags="" value="0" parameter="17" symbol="param_14"/>
+        <Controllable name="Parameter 15" id="352" flags="" value="0" parameter="18" symbol="param_15"/>
+        <Controllable name="Parameter 16" id="354" flags="" value="0" parameter="19" symbol="param_16"/>
+        <Controllable name="Parameter 17" id="356" flags="" value="0" parameter="20" symbol="param_17"/>
+        <Controllable name="Parameter 18" id="358" flags="" value="0" parameter="21" symbol="param_18"/>
+        <Controllable name="Parameter 19" id="360" flags="" value="0" parameter="22" symbol="param_19"/>
+        <Controllable name="Parameter 20" id="362" flags="" value="0" parameter="23" symbol="param_20"/>
+        <Controllable name="Parameter 21" id="364" flags="" value="0" parameter="24" symbol="param_21"/>
+        <Controllable name="Parameter 22" id="366" flags="" value="0" parameter="25" symbol="param_22"/>
+        <Controllable name="Parameter 23" id="368" flags="" value="0" parameter="26" symbol="param_23"/>
+        <Controllable name="Parameter 24" id="370" flags="" value="0" parameter="27" symbol="param_24"/>
+        <Controllable name="Enabled" id="372" flags="Toggle" value="1" parameter="28" symbol="lv2_enabled"/>
+        <Controllable name="Show tooltips" id="374" flags="Toggle" value="1" parameter="29" symbol="tooltips"/>
+        <Controllable name="Cable opacity" id="376" flags="" value="50" parameter="30" symbol="cableOpacity"/>
+        <Controllable name="Cable tension" id="378" flags="" value="75" parameter="31" symbol="cableTension"/>
+        <Controllable name="Room brightness" id="380" flags="" value="100" parameter="32" symbol="rackBrightness"/>
+        <Controllable name="Light Bloom" id="382" flags="" value="25" parameter="33" symbol="haloBrightness"/>
+        <Controllable name="Knob mode" id="384" flags="" value="0" parameter="34" symbol="knobMode"/>
+        <Controllable name="Scroll wheel knob control" id="386" flags="Toggle" value="0" parameter="35" symbol="knobScroll"/>
+        <Controllable name="Scroll wheel knob sensitivity" id="388" flags="" value="1" parameter="36" symbol="knobScrollSensitivity"/>
+        <Controllable name="Lock module positions" id="390" flags="Toggle" value="0" parameter="37" symbol="lockModules"/>
+        <Controllable name="Update rate limit" id="392" flags="" value="0" parameter="38" symbol="rateLimit"/>
+        <Controllable name="Browser sort" id="394" flags="" value="0" parameter="39" symbol="browserSort"/>
+        <Controllable name="Browser zoom" id="396" flags="" value="50" parameter="40" symbol="browserZoom"/>
+        <Controllable name="Invert zoom" id="398" flags="Toggle" value="0" parameter="41" symbol="invertZoom"/>
+        <Controllable name="Auto-squeeze module positions" id="400" flags="Toggle" value="1" parameter="42" symbol="squeezeModules"/>
+        <Controllable name="property-https://distrho.kx.studio/plugins/cardinal#synth#comment" id="1070" flags="NotAutomatable" property="91"/>
+      </Processor>
+      <Processor id="489" name="ACE MIDI Monitor" active="1" user-latency="0" use-user-latency="0" type="luaproc" unique-id="918f3b991b13912d151b8f9805d96c57a0212faa" count="1" custom="0">
+        <ConfiguredInput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="2"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+          <Channelmap type="midi" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="audio" from="1" to="1"/>
+          <Channelmap type="midi" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <luaproc last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0">
+          <script lua="Lua 5.3" origin="/opt/Ardour-8.12.0/share/scripts/midimon.lua">YXJkb3VyIHsKCVsidHlwZSJdICAgID0gImRzcCIsCgluYW1lICAgICAgICA9ICJBQ0UgTUlESSBNb25pdG9yIiwKCWNhdGVnb3J5ICAgID0gIlZpc3VhbGl6YXRpb24iLAoJbGljZW5zZSAgICAgPSAiR1BMdjIiLAoJYXV0aG9yICAgICAgPSAiQXJkb3VyIENvbW11bml0eSIsCglkZXNjcmlwdGlvbiA9IFtbRGlzcGxheSByZWNlbnQgTUlEScKgZXZlbnRzIGlubGluZSBpbiB0aGUgbWl4ZXIgc3RyaXBdXQp9Cgpsb2NhbCBtYXhldmVudHMgPSAyMApsb2NhbCByaW5nc2l6ZSA9IG1heGV2ZW50cyAqIDMKbG9jYWwgZXZsZW4gPSAzCmxvY2FsIGhwYWRkaW5nLCB2cGFkZGluZyA9IDQsIDIKCmZ1bmN0aW9uIGRzcF9pb2NvbmZpZyAoKQoJcmV0dXJuIHsgeyBtaWRpX2luID0gMSwgbWlkaV9vdXQgPSAxLCBhdWRpb19pbiA9IC0xLCBhdWRpb19vdXQgPSAtMX0sIH0KZW5kCgpmdW5jdGlvbiBkc3BfcGFyYW1zICgpCglyZXR1cm4KCXsKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJGb250IHNpemUiLAoJCQlkb2MgPSAiVGV4dCBzaXplIHVzZWQgYnkgdGhlIG1vbml0b3IgdG8gZGlzcGxheSBtaWRpIGV2ZW50cyIsCgkJCW1pbiA9IDQsIG1heCA9IDEyLCBkZWZhdWx0ID0gNywgaW50ZWdlciA9IHRydWUgfSwKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJMaW5lIGNvdW50IiwKCQkJZG9jID0gIkhvdyBtYW55IGV2ZW50cyB3aWxsIGJlIHNob3duIGF0IG1vc3QiLAoJCQltaW4gPSAxLCBtYXggPSBtYXhldmVudHMsIGRlZmF1bHQgPSA2LCBpbnRlZ2VyID0gdHJ1ZSB9LAoJCXsgWyJ0eXBlIl0gPSAiaW5wdXQiLAoJCQluYW1lID0gIkhleGFkZWNpbWFsIiwKCQkJZG9jID0gIklmIGVuYWJsZWQsIHZhbHVlcyB3aWxsIGJlIHByaW50ZWQgaW4gaGV4YWRlY2ltYWwgbm90YXRpb24iLAoJCQltaW4gPSAwLCBtYXggPSAxLCBkZWZhdWx0ID0gMCwgdG9nZ2xlZCA9IHRydWUgfSwKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJTeXN0ZW0gbWVzc2FnZXMiLAoJCQlkb2MgPSAiSWYgZW5hYmxlZCwgdGhlIG1vbml0b3Igd2lsbCBzaG93IFN5c3RlbSBDb250cm9sIGFuZCBSZWFsLVRpbWUgbWVzc2FnZXMiLAoJCQltaW4gPSAwLCBtYXggPSAxLCBkZWZhdWx0ID0gMCwgdG9nZ2xlZCA9IHRydWUgfSwKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJOdW1lcmljIE5vdGVzIiwKCQkJZG9jID0gIklmIGVuYWJsZWQsIG5vdGUtZXZlbnRzIGRpc3BsYXllZCBudW1lcmljYWxseSIsCgkJCW1pbiA9IDAsIG1heCA9IDEsIGRlZmF1bHQgPSAwLCB0b2dnbGVkID0gdHJ1ZSB9LAoJfQplbmQKCmZ1bmN0aW9uIGRzcF9pbml0IChyYXRlKQoJLS0gY3JlYXRlIGEgc2htZW0gc3BhY2UgdG8gaG9sZCBsYXRlc3QgbWlkaSBldmVudHMKCS0tIGEgaW50IHJlcHJlc2VudGluZyB0aGUgaW5kZXggb2YgdGhlIGxhc3QgZXZlbnQsIGFuZAoJLS0gYSBDLXRhYmxlIGFzIHN0b3JhZ2UgZm9yIGV2ZW50cy4KCXNlbGY6c2htZW0oKTphbGxvY2F0ZSgxICsgcmluZ3NpemUqZXZsZW4pCglzZWxmOnNobWVtKCk6YXRvbWljX3NldF9pbnQoMCwgMSkKCWxvY2FsIGJ1ZmZlciA9IHNlbGY6c2htZW0oKTp0b19pbnQoMSk6YXJyYXkoKQoJZm9yIGkgPSAxLCByaW5nc2l6ZSpldmxlbiBkbwoJCWJ1ZmZlcltpXSA9IC0xIC0tIHNlbnRpbmVsIGZvciBlbXB0eSBzbG90CgllbmQKZW5kCgpmdW5jdGlvbiBkc3BfY29uZmlndXJlIChpbnMsIG91dHMpCgluX291dCA9IG91dHMKZW5kCgpmdW5jdGlvbiBkc3BfcnVubWFwIChidWZzLCBpbl9tYXAsIG91dF9tYXAsIG5fc2FtcGxlcywgb2Zmc2V0KQoJbG9jYWwgcG9zID0gc2VsZjpzaG1lbSgpOmF0b21pY19nZXRfaW50KDApCglsb2NhbCBidWZmZXIgPSBzZWxmOnNobWVtKCk6dG9faW50KDEpOmFycmF5KCkKCWxvY2FsIG5ld2RhdGEgPSBmYWxzZQoKCS0tIHBhc3N0aHJvdWdoIGFsbCBkYXRhCglBUkRPVVIuRFNQLnByb2Nlc3NfbWFwIChidWZzLCBuX291dCwgaW5fbWFwLCBvdXRfbWFwLCBuX3NhbXBsZXMsIG9mZnNldCkKCgktLSB0aGVuIGZpbGwgdGhlIGV2ZW50IGJ1ZmZlcgoJbG9jYWwgaWIgPSBpbl9tYXA6Z2V0IChBUkRPVVIuRGF0YVR5cGUgKCJtaWRpIiksIDApIC0tIGluZGV4IG9mIDFzdCBtaWRpIGlucHV0CgoJaWYgaWIgfj0gQVJET1VSLkNoYW5NYXBwaW5nLkludmFsaWQgdGhlbgoJCWxvY2FsIGV2ZW50cyA9IGJ1ZnM6Z2V0X21pZGkgKGliKTp0YWJsZSAoKSAtLSBjb3B5IGV2ZW50IGxpc3QgaW50byBhIGx1YSB0YWJsZQoKCQktLSBpdGVyYXRlIG92ZXIgYWxsIE1JREkgZXZlbnRzCgkJZm9yIF8sIGUgaW4gcGFpcnMgKGV2ZW50cykgZG8KCQkJbG9jYWwgZXYgPSBlOmJ1ZmZlcigpOmFycmF5KCkKCQkJcG9zID0gcG9zICUgcmluZ3NpemUgKyAxCgkJCS0tIGNvcHkgdGhlIGRhdGEKCQkJZm9yIGogPSAxLCBtYXRoLm1pbihlOnNpemUoKSxldmxlbikgZG8KCQkJCWJ1ZmZlclsocG9zLTEpKmV2bGVuICsgal0gPSBldltqXQoJCQllbmQKCQkJLS0gemVybyB1bnVzZWQgc2xvdHMKCQkJZm9yIGogPSBlOnNpemUoKSsxLCBldmxlbiBkbwoJCQkJYnVmZmVyWyhwb3MtMSkqZXZsZW4gKyBqXSA9IDAKCQkJZW5kCgkJCW5ld2RhdGEgPSB0cnVlCgkJZW5kCgllbmQKCglzZWxmOnNobWVtKCk6YXRvbWljX3NldF9pbnQoMCwgcG9zKQoKCWlmIG5ld2RhdGEgdGhlbgoJCXNlbGY6cXVldWVfZHJhdyAoKQoJZW5kCmVuZAoKbG9jYWwgdHh0ID0gbmlsIC0tIGEgcGFuZ28gY29udGV4dApsb2NhbCBjdXJzaXplID0gMApsb2NhbCBoZXggPSBuaWwKbG9jYWwgZm9ybWF0X25vdGUgPSBuaWwKbG9jYWwgc2hvd19zY20gPSBuaWwKCmZ1bmN0aW9uIGZvcm1hdF9ub3RlX25hbWUoYikKCXJldHVybiBzdHJpbmcuZm9ybWF0ICgiJTVzIiwgQVJET1VSLlBhcmFtZXRlckRlc2NyaXB0b3IubWlkaV9ub3RlX25hbWUgKGIpKQplbmQKCmZ1bmN0aW9uIGZvcm1hdF9ub3RlX251bShiKQoJcmV0dXJuIHN0cmluZy5mb3JtYXQgKGhleCwgYikKZW5kCgoKZnVuY3Rpb24gc2hvd19taWRpKGN0eCwgeCwgeSwgYnVmZmVyLCBldmVudCkKCWxvY2FsIGJhc2UgPSAoZXZlbnQgLSAxKSAqIGV2bGVuCglpZiBidWZmZXJbYmFzZSsxXSA9PSAtMSB0aGVuIHJldHVybiBmYWxzZSBlbmQKCWxvY2FsIGV2dHlwZSA9IGJ1ZmZlcltiYXNlICsgMV0gPj4gNAoJbG9jYWwgY2hhbm5lbCA9IChidWZmZXJbYmFzZSArIDFdICYgMTUpICsgMSAtLSBmb3IgU3lzdGVtIENvbW1vbiBNZXNzYWdlcyB0aGlzIGhhcyBubyB1c2UKCWlmIGV2dHlwZSA9PSA4IHRoZW4KCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiJTAydSBcdXsyNjY5fU9mZiVzIiAuLiBoZXgsIGNoYW5uZWwsIGZvcm1hdF9ub3RlKGJ1ZmZlcltiYXNlKzJdKSwgYnVmZmVyW2Jhc2UrM10pKQoJZWxzZWlmIGV2dHlwZSA9PSA5IHRoZW4KCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiJTAydSBcdXsyNjY5fU9uICVzIiAuLiBoZXgsIGNoYW5uZWwsIGZvcm1hdF9ub3RlKGJ1ZmZlcltiYXNlKzJdKSwgYnVmZmVyW2Jhc2UrM10pKQoJZWxzZWlmIGV2dHlwZSA9PSAxMCB0aGVuCgkJdHh0OnNldF90ZXh0KHN0cmluZy5mb3JtYXQoIiUwMnUgXHV7MjY2OX1LUCAlcyIgLi4gaGV4LCBjaGFubmVsLCBmb3JtYXRfbm90ZShidWZmZXJbYmFzZSsyXSksIGJ1ZmZlcltiYXNlKzNdKSkKCWVsc2VpZiBldnR5cGUgPT0gMTEgdGhlbgoJCXR4dDpzZXRfdGV4dChzdHJpbmcuZm9ybWF0KCIlMDJ1IENDICAiIC4uIGhleCAuLiBoZXgsIGNoYW5uZWwsIGJ1ZmZlcltiYXNlKzJdLCBidWZmZXJbYmFzZSszXSkpCgllbHNlaWYgZXZ0eXBlID09IDEyIHRoZW4KCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiJTAydSBQUkcgIiAuLiBoZXgsIGNoYW5uZWwsIGJ1ZmZlcltiYXNlKzJdKSkKCWVsc2VpZiBldnR5cGUgPT0gMTMgdGhlbgoJCXR4dDpzZXRfdGV4dChzdHJpbmcuZm9ybWF0KCIlMDJ1ICBLUCAiIC4uIGhleCwgY2hhbm5lbCwgYnVmZmVyW2Jhc2UrMl0pKQoJZWxzZWlmIGV2dHlwZSA9PSAxNCB0aGVuCgkJdHh0OnNldF90ZXh0KHN0cmluZy5mb3JtYXQoIiUwMnUgUEJuZCIgLi4gaGV4LCBjaGFubmVsLCBidWZmZXJbYmFzZSsyXSB8IGJ1ZmZlcltiYXNlKzNdIDw8IDcpKQoJZWxzZWlmIHNob3dfc2NtID4gMCB0aGVuIC0tIFN5c3RlbSBDb21tb24gTWVzc2FnZQoJCWxvY2FsIG1lc3NhZ2UgPSBidWZmZXJbYmFzZSArIDFdICYgMTUKCQlpZiBtZXNzYWdlID09IDAgdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFN5c0V4IikKCQllbHNlaWYgbWVzc2FnZSA9PSAxIHRoZW4KCQkJdHh0OnNldF90ZXh0KHN0cmluZy5mb3JtYXQoIi0tIFRpbWUgQ29kZSIgLi4gaGV4LCBidWZmZXJbYmFzZSsyXSkpCgkJZWxzZWlmIG1lc3NhZ2UgPT0gMiB0aGVuCgkJCXR4dDpzZXRfdGV4dChzdHJpbmcuZm9ybWF0KCItLSBTb25nIFBvcyIgLi4gaGV4LCBidWZmZXJbYmFzZSsyXSB8IGJ1ZmZlcltiYXNlKzNdIDw8IDcpKQoJCWVsc2VpZiBtZXNzYWdlID09IDMgdGhlbgoJCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiLS0gU2VsZWN0IFNvbmciIC4uIGhleCwgYnVmZmVyW2Jhc2UrMl0pKQoJCWVsc2VpZiBtZXNzYWdlID09IDYgdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFR1bmUgUnEiKQoJCWVsc2VpZiBtZXNzYWdlID09IDggdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFRpbWluZyIpCgkJZWxzZWlmIG1lc3NhZ2UgPT0gMTAgdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFN0YXJ0IikKCQllbHNlaWYgbWVzc2FnZSA9PSAxMSB0aGVuCgkJCXR4dDpzZXRfdGV4dCgiLS0gQ29udGludWUiKQoJCWVsc2VpZiBtZXNzYWdlID09IDEyIHRoZW4KCQkJdHh0OnNldF90ZXh0KCItLSBTdG9wIikKCQllbHNlaWYgbWVzc2FnZSA9PSAxNCB0aGVuCgkJCXR4dDpzZXRfdGV4dCgiLS0gQWN0aXZlIikKCQllbHNlaWYgbWVzc2FnZSA9PSAxNSB0aGVuCgkJCXR4dDpzZXRfdGV4dCgiLS0gUmVzZXQiKQoJCWVsc2UKCQkJcmV0dXJuIGZhbHNlCgkJZW5kCgllbHNlCgkJcmV0dXJuIGZhbHNlCgllbmQKCWN0eDptb3ZlX3RvICh4LCB5KQoJdHh0OnNob3dfaW5fY2Fpcm9fY29udGV4dCAoY3R4KQoJcmV0dXJuIHRydWUKZW5kCgpmdW5jdGlvbiByZW5kZXJfaW5saW5lIChjdHgsIGRpc3BsYXl3aWR0aCwgbWF4X2gpCglsb2NhbCBjdHJsID0gQ3RybFBvcnRzOmFycmF5ICgpCglsb2NhbCBwb3MgPSBzZWxmOnNobWVtKCk6YXRvbWljX2dldF9pbnQoMCkKCWxvY2FsIGJ1ZmZlciA9IHNlbGY6c2htZW0oKTp0b19pbnQoMSk6YXJyYXkoKQoJbG9jYWwgY291bnQgPSBjdHJsWzJdCgoJaWYgbm90IHR4dCBvciBjdXJzaXplIH49IGN0cmxbMV0gdGhlbgoJCWN1cnNpemUgPSBtYXRoLmZsb29yKGN0cmxbMV0pCgkJdHh0ID0gQ2Fpcm8uUGFuZ29MYXlvdXQgKGN0eCwgIk1vbm8gIiAuLiBjdXJzaXplKQoJZW5kCgoJaWYgY3RybFszXSA+IDAgdGhlbiBoZXggPSAiICUwMlgiIGVsc2UgaGV4ID0gIiAlM3UiIGVuZAoJc2hvd19zY20gPSBjdHJsWzRdCgoJaWYgY3RybFs1XSA+IDAgdGhlbgoJCWZvcm1hdF9ub3RlID0gZm9ybWF0X25vdGVfbnVtCgllbHNlCgkJZm9ybWF0X25vdGUgPSBmb3JtYXRfbm90ZV9uYW1lCgllbmQKCgktLSBjb21wdXRlIHRoZSBzaXplIG9mIHRoZSBkaXNwbGF5Cgl0eHQ6c2V0X3RleHQoIjAiKQoJbG9jYWwgXywgbGluZWhlaWdodCA9IHR4dDpnZXRfcGl4ZWxfc2l6ZSgpCglsb2NhbCBkaXNwbGF5aGVpZ2h0ID0gbWF0aC5taW4odnBhZGRpbmcgKyAobGluZWhlaWdodCArIHZwYWRkaW5nKSAqIGNvdW50LCBtYXhfaCkKCgktLSBjb21wdXRlIHN0YXJ0aW5nIHBvc2l0aW9uIChwYW5nbyBhbmNob3JzIHRleHQgYXQgbm9ydGgtd2VzdCBjb3JuZXIpCglsb2NhbCB4LCB5ID0gaHBhZGRpbmcsIGRpc3BsYXloZWlnaHQgLSBsaW5laGVpZ2h0IC0gdnBhZGRpbmcKCgktLSBjbGVhciBiYWNrZ3JvdW5kCgljdHg6cmVjdGFuZ2xlICgwLCAwLCBkaXNwbGF5d2lkdGgsIGRpc3BsYXloZWlnaHQpCgljdHg6c2V0X3NvdXJjZV9yZ2JhICguMiwgLjIsIC4yLCAxLjApCgljdHg6ZmlsbCAoKQoKCS0tIGNvbG9yIG9mIGxhdGVzdCBldmVudAoJY3R4OnNldF9zb3VyY2VfcmdiYSAoMS4wLCAxLjAsIDEuMCwgMS4wKQoKCS0tIHByaW50IGV2ZW50cwoJZm9yIGkgPSBwb3MsIDEsIC0xIGRvCgkJaWYgeSA8IDAgdGhlbiBicmVhayBlbmQKCQlpZiBzaG93X21pZGkoY3R4LCB4LCB5LCBidWZmZXIsIGkpIHRoZW4KCQkJeSA9IHkgLSBsaW5laGVpZ2h0IC0gdnBhZGRpbmcKCQkJY3R4OnNldF9zb3VyY2VfcmdiYSAoLjgsIC44LCAuOCwgMS4wKQoJCWVuZAoJZW5kCglmb3IgaSA9IHJpbmdzaXplLCBwb3MrMSwgLTEgZG8KCQlpZiB5IDwgMCB0aGVuIGJyZWFrIGVuZAoJCWlmIHNob3dfbWlkaShjdHgsIHgsIHksIGJ1ZmZlciwgaSkgdGhlbgoJCQl5ID0geSAtIGxpbmVoZWlnaHQgLSB2cGFkZGluZwoJCQljdHg6c2V0X3NvdXJjZV9yZ2JhICguOCwgLjgsIC44LCAxLjApCgkJZW5kCgllbmQKCglyZXR1cm4ge2Rpc3BsYXl3aWR0aCwgZGlzcGxheWhlaWdodH0KZW5kCg==</script>
+          <Port id="0" value="7"/>
+          <Port id="1" value="6"/>
+          <Port id="2" value="0"/>
+          <Port id="3" value="0"/>
+          <Port id="4" value="0"/>
+        </luaproc>
+        <Controllable name="Font size" id="491" flags="" value="7" parameter="0"/>
+        <Controllable name="Line count" id="493" flags="" value="6" parameter="1"/>
+        <Controllable name="Hexadecimal" id="495" flags="Toggle" value="0" parameter="2"/>
+        <Controllable name="System messages" id="497" flags="Toggle" value="0" parameter="3"/>
+        <Controllable name="Numeric Notes" id="499" flags="Toggle" value="0" parameter="4"/>
+      </Processor>
+      <Processor id="275" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="249" flags="GainLike" value="1"/>
+      </Processor>
+      <Processor id="279" name="meter-CCProducer" active="1" user-latency="0" use-user-latency="0" type="meter"/>
+      <Processor id="280" name="CCProducer" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="CCProducer" type="main-outs" role="Main">
+        <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
+      </Processor>
+      <Slavable/>
+      <Controllable name="monitor" id="289" flags="RealTime" value="0" monitoring=""/>
+      <Controllable name="rec-safe" id="287" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="rec-enable" id="285" flags="Toggle,RealTime" value="0"/>
+    </Route>
+    <Route version="7003" id="407" name="CCConsumer" default-type="audio" strict-io="1" active="1" denormal-protection="0" meter-point="MeterPostFader" disk-io-point="DiskIOPreFader" meter-type="MeterPeak" audio-playlist="469" alignment-choice="Automatic" mode="Normal">
+      <ProgramVersion created-with="Ardour 8.12" modified-with="Ardour 8.12"/>
+      <PresentationInfo order="2" flags="AudioTrack,OrderSet" color="3563743999"/>
+      <Controllable name="solo" id="432" flags="Toggle,RealTime" value="0" self-solo="0" soloed-by-upstream="0" soloed-by-downstream="0"/>
+      <Controllable name="solo-iso" id="438" flags="Toggle,RealTime" value="0" solo-isolated="0"/>
+      <Controllable name="solo-safe" id="440" flags="Toggle" value="0" solo-safe="0"/>
+      <IO name="CCConsumer" id="452" direction="Input" default-type="audio">
+        <Port name="CCConsumer/audio_in 1" type="audio" direction="Input"/>
+        <Port name="CCConsumer/midi_in 1" type="midi" direction="Input">
+          <ExtConnection for="JACK"/>
+          <ExtConnection for="JACK" other="Midi-Bridge:Midi Through:(capture_0) Midi Through Port-0"/>
+        </Port>
+      </IO>
+      <IO name="CCConsumer" id="453" direction="Output" default-type="audio">
+        <Port name="CCConsumer/audio_out 1" type="audio" direction="Output">
+          <Connection other="Master/audio_in 1"/>
+        </Port>
+        <Port name="CCConsumer/audio_out 2" type="audio" direction="Output">
+          <Connection other="Master/audio_in 2"/>
+        </Port>
+        <Port name="CCConsumer/midi_out 1" type="midi" direction="Output"/>
+      </IO>
+      <MuteMaster mute-point="PostFader,Listen,Main,SurroundSend" muted="0"/>
+      <Controllable name="mute" id="434" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="phase" id="436" flags="Toggle" value="0" phase-invert="0"/>
+      <Pannable>
+        <Controllable name="pan-azimuth" id="443" flags="" value="0.5"/>
+        <Controllable name="pan-width" id="447" flags="" value="0"/>
+        <Controllable name="pan-elevation" id="445" flags="" value="0"/>
+        <Controllable name="pan-frontback" id="449" flags="" value="0"/>
+        <Controllable name="pan-lfe" id="451" flags="" value="0"/>
+        <Automation>
+          <AutomationList automation-id="pan-azimuth" id="442" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-elevation" id="444" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-width" id="446" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-frontback" id="448" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+          <AutomationList automation-id="pan-lfe" id="450" interpolation-style="Linear" time-domain="BeatTime" state="Off"/>
+        </Automation>
+      </Pannable>
+      <Processor id="462" name="recorder:CCConsumer" active="1" user-latency="0" use-user-latency="0" type="diskwriter" record-safe="0"/>
+      <Processor id="461" name="player:CCConsumer" active="1" user-latency="0" use-user-latency="0" type="diskreader"/>
+      <Processor id="410" name="TriggerBox" active="1" user-latency="0" use-user-latency="0" type="triggerbox" data-type="audio" order="1">
+        <Triggers>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="0" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="1" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="2" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="3" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="4" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="5" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="6" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="7" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="8" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="9" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="10" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="11" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="12" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="13" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="14" segment-tempo="0" start="a0"/>
+          <Trigger name="" gain="1" color="3200171775" follow-count="1" use-follow-length="0" follow-length="1|0|0" legato="0" velocity-effect="0" follow-action-probability="0" quantization="1|0|0" launch-style="OneShot" follow-action-0="Again:0" follow-action-1="Stop:0" stretchable="1" cue_isolated="0" allow_patch_changes="1" stretch_mode="Crisp" index="15" segment-tempo="0" start="a0"/>
+        </Triggers>
+      </Processor>
+      <Processor id="455" name="Polarity" active="1" user-latency="0" use-user-latency="0" type="polarity"/>
+      <Processor id="457" name="Amp" active="1" user-latency="0" use-user-latency="0" type="trim">
+        <Controllable name="trimcontrol" id="430" flags="GainLike" value="1"/>
+      </Processor>
+      <Processor id="526" name="ACE MIDI Monitor" active="1" user-latency="0" use-user-latency="0" type="luaproc" unique-id="918f3b991b13912d151b8f9805d96c57a0212faa" count="1" custom="0">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="1"/>
+          <Channels type="midi" count="1"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="midi" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+          <Channelmap type="midi" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <luaproc last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="0">
+          <script lua="Lua 5.3" origin="/opt/Ardour-8.12.0/share/scripts/midimon.lua">YXJkb3VyIHsKCVsidHlwZSJdICAgID0gImRzcCIsCgluYW1lICAgICAgICA9ICJBQ0UgTUlESSBNb25pdG9yIiwKCWNhdGVnb3J5ICAgID0gIlZpc3VhbGl6YXRpb24iLAoJbGljZW5zZSAgICAgPSAiR1BMdjIiLAoJYXV0aG9yICAgICAgPSAiQXJkb3VyIENvbW11bml0eSIsCglkZXNjcmlwdGlvbiA9IFtbRGlzcGxheSByZWNlbnQgTUlEScKgZXZlbnRzIGlubGluZSBpbiB0aGUgbWl4ZXIgc3RyaXBdXQp9Cgpsb2NhbCBtYXhldmVudHMgPSAyMApsb2NhbCByaW5nc2l6ZSA9IG1heGV2ZW50cyAqIDMKbG9jYWwgZXZsZW4gPSAzCmxvY2FsIGhwYWRkaW5nLCB2cGFkZGluZyA9IDQsIDIKCmZ1bmN0aW9uIGRzcF9pb2NvbmZpZyAoKQoJcmV0dXJuIHsgeyBtaWRpX2luID0gMSwgbWlkaV9vdXQgPSAxLCBhdWRpb19pbiA9IC0xLCBhdWRpb19vdXQgPSAtMX0sIH0KZW5kCgpmdW5jdGlvbiBkc3BfcGFyYW1zICgpCglyZXR1cm4KCXsKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJGb250IHNpemUiLAoJCQlkb2MgPSAiVGV4dCBzaXplIHVzZWQgYnkgdGhlIG1vbml0b3IgdG8gZGlzcGxheSBtaWRpIGV2ZW50cyIsCgkJCW1pbiA9IDQsIG1heCA9IDEyLCBkZWZhdWx0ID0gNywgaW50ZWdlciA9IHRydWUgfSwKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJMaW5lIGNvdW50IiwKCQkJZG9jID0gIkhvdyBtYW55IGV2ZW50cyB3aWxsIGJlIHNob3duIGF0IG1vc3QiLAoJCQltaW4gPSAxLCBtYXggPSBtYXhldmVudHMsIGRlZmF1bHQgPSA2LCBpbnRlZ2VyID0gdHJ1ZSB9LAoJCXsgWyJ0eXBlIl0gPSAiaW5wdXQiLAoJCQluYW1lID0gIkhleGFkZWNpbWFsIiwKCQkJZG9jID0gIklmIGVuYWJsZWQsIHZhbHVlcyB3aWxsIGJlIHByaW50ZWQgaW4gaGV4YWRlY2ltYWwgbm90YXRpb24iLAoJCQltaW4gPSAwLCBtYXggPSAxLCBkZWZhdWx0ID0gMCwgdG9nZ2xlZCA9IHRydWUgfSwKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJTeXN0ZW0gbWVzc2FnZXMiLAoJCQlkb2MgPSAiSWYgZW5hYmxlZCwgdGhlIG1vbml0b3Igd2lsbCBzaG93IFN5c3RlbSBDb250cm9sIGFuZCBSZWFsLVRpbWUgbWVzc2FnZXMiLAoJCQltaW4gPSAwLCBtYXggPSAxLCBkZWZhdWx0ID0gMCwgdG9nZ2xlZCA9IHRydWUgfSwKCQl7IFsidHlwZSJdID0gImlucHV0IiwKCQkJbmFtZSA9ICJOdW1lcmljIE5vdGVzIiwKCQkJZG9jID0gIklmIGVuYWJsZWQsIG5vdGUtZXZlbnRzIGRpc3BsYXllZCBudW1lcmljYWxseSIsCgkJCW1pbiA9IDAsIG1heCA9IDEsIGRlZmF1bHQgPSAwLCB0b2dnbGVkID0gdHJ1ZSB9LAoJfQplbmQKCmZ1bmN0aW9uIGRzcF9pbml0IChyYXRlKQoJLS0gY3JlYXRlIGEgc2htZW0gc3BhY2UgdG8gaG9sZCBsYXRlc3QgbWlkaSBldmVudHMKCS0tIGEgaW50IHJlcHJlc2VudGluZyB0aGUgaW5kZXggb2YgdGhlIGxhc3QgZXZlbnQsIGFuZAoJLS0gYSBDLXRhYmxlIGFzIHN0b3JhZ2UgZm9yIGV2ZW50cy4KCXNlbGY6c2htZW0oKTphbGxvY2F0ZSgxICsgcmluZ3NpemUqZXZsZW4pCglzZWxmOnNobWVtKCk6YXRvbWljX3NldF9pbnQoMCwgMSkKCWxvY2FsIGJ1ZmZlciA9IHNlbGY6c2htZW0oKTp0b19pbnQoMSk6YXJyYXkoKQoJZm9yIGkgPSAxLCByaW5nc2l6ZSpldmxlbiBkbwoJCWJ1ZmZlcltpXSA9IC0xIC0tIHNlbnRpbmVsIGZvciBlbXB0eSBzbG90CgllbmQKZW5kCgpmdW5jdGlvbiBkc3BfY29uZmlndXJlIChpbnMsIG91dHMpCgluX291dCA9IG91dHMKZW5kCgpmdW5jdGlvbiBkc3BfcnVubWFwIChidWZzLCBpbl9tYXAsIG91dF9tYXAsIG5fc2FtcGxlcywgb2Zmc2V0KQoJbG9jYWwgcG9zID0gc2VsZjpzaG1lbSgpOmF0b21pY19nZXRfaW50KDApCglsb2NhbCBidWZmZXIgPSBzZWxmOnNobWVtKCk6dG9faW50KDEpOmFycmF5KCkKCWxvY2FsIG5ld2RhdGEgPSBmYWxzZQoKCS0tIHBhc3N0aHJvdWdoIGFsbCBkYXRhCglBUkRPVVIuRFNQLnByb2Nlc3NfbWFwIChidWZzLCBuX291dCwgaW5fbWFwLCBvdXRfbWFwLCBuX3NhbXBsZXMsIG9mZnNldCkKCgktLSB0aGVuIGZpbGwgdGhlIGV2ZW50IGJ1ZmZlcgoJbG9jYWwgaWIgPSBpbl9tYXA6Z2V0IChBUkRPVVIuRGF0YVR5cGUgKCJtaWRpIiksIDApIC0tIGluZGV4IG9mIDFzdCBtaWRpIGlucHV0CgoJaWYgaWIgfj0gQVJET1VSLkNoYW5NYXBwaW5nLkludmFsaWQgdGhlbgoJCWxvY2FsIGV2ZW50cyA9IGJ1ZnM6Z2V0X21pZGkgKGliKTp0YWJsZSAoKSAtLSBjb3B5IGV2ZW50IGxpc3QgaW50byBhIGx1YSB0YWJsZQoKCQktLSBpdGVyYXRlIG92ZXIgYWxsIE1JREkgZXZlbnRzCgkJZm9yIF8sIGUgaW4gcGFpcnMgKGV2ZW50cykgZG8KCQkJbG9jYWwgZXYgPSBlOmJ1ZmZlcigpOmFycmF5KCkKCQkJcG9zID0gcG9zICUgcmluZ3NpemUgKyAxCgkJCS0tIGNvcHkgdGhlIGRhdGEKCQkJZm9yIGogPSAxLCBtYXRoLm1pbihlOnNpemUoKSxldmxlbikgZG8KCQkJCWJ1ZmZlclsocG9zLTEpKmV2bGVuICsgal0gPSBldltqXQoJCQllbmQKCQkJLS0gemVybyB1bnVzZWQgc2xvdHMKCQkJZm9yIGogPSBlOnNpemUoKSsxLCBldmxlbiBkbwoJCQkJYnVmZmVyWyhwb3MtMSkqZXZsZW4gKyBqXSA9IDAKCQkJZW5kCgkJCW5ld2RhdGEgPSB0cnVlCgkJZW5kCgllbmQKCglzZWxmOnNobWVtKCk6YXRvbWljX3NldF9pbnQoMCwgcG9zKQoKCWlmIG5ld2RhdGEgdGhlbgoJCXNlbGY6cXVldWVfZHJhdyAoKQoJZW5kCmVuZAoKbG9jYWwgdHh0ID0gbmlsIC0tIGEgcGFuZ28gY29udGV4dApsb2NhbCBjdXJzaXplID0gMApsb2NhbCBoZXggPSBuaWwKbG9jYWwgZm9ybWF0X25vdGUgPSBuaWwKbG9jYWwgc2hvd19zY20gPSBuaWwKCmZ1bmN0aW9uIGZvcm1hdF9ub3RlX25hbWUoYikKCXJldHVybiBzdHJpbmcuZm9ybWF0ICgiJTVzIiwgQVJET1VSLlBhcmFtZXRlckRlc2NyaXB0b3IubWlkaV9ub3RlX25hbWUgKGIpKQplbmQKCmZ1bmN0aW9uIGZvcm1hdF9ub3RlX251bShiKQoJcmV0dXJuIHN0cmluZy5mb3JtYXQgKGhleCwgYikKZW5kCgoKZnVuY3Rpb24gc2hvd19taWRpKGN0eCwgeCwgeSwgYnVmZmVyLCBldmVudCkKCWxvY2FsIGJhc2UgPSAoZXZlbnQgLSAxKSAqIGV2bGVuCglpZiBidWZmZXJbYmFzZSsxXSA9PSAtMSB0aGVuIHJldHVybiBmYWxzZSBlbmQKCWxvY2FsIGV2dHlwZSA9IGJ1ZmZlcltiYXNlICsgMV0gPj4gNAoJbG9jYWwgY2hhbm5lbCA9IChidWZmZXJbYmFzZSArIDFdICYgMTUpICsgMSAtLSBmb3IgU3lzdGVtIENvbW1vbiBNZXNzYWdlcyB0aGlzIGhhcyBubyB1c2UKCWlmIGV2dHlwZSA9PSA4IHRoZW4KCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiJTAydSBcdXsyNjY5fU9mZiVzIiAuLiBoZXgsIGNoYW5uZWwsIGZvcm1hdF9ub3RlKGJ1ZmZlcltiYXNlKzJdKSwgYnVmZmVyW2Jhc2UrM10pKQoJZWxzZWlmIGV2dHlwZSA9PSA5IHRoZW4KCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiJTAydSBcdXsyNjY5fU9uICVzIiAuLiBoZXgsIGNoYW5uZWwsIGZvcm1hdF9ub3RlKGJ1ZmZlcltiYXNlKzJdKSwgYnVmZmVyW2Jhc2UrM10pKQoJZWxzZWlmIGV2dHlwZSA9PSAxMCB0aGVuCgkJdHh0OnNldF90ZXh0KHN0cmluZy5mb3JtYXQoIiUwMnUgXHV7MjY2OX1LUCAlcyIgLi4gaGV4LCBjaGFubmVsLCBmb3JtYXRfbm90ZShidWZmZXJbYmFzZSsyXSksIGJ1ZmZlcltiYXNlKzNdKSkKCWVsc2VpZiBldnR5cGUgPT0gMTEgdGhlbgoJCXR4dDpzZXRfdGV4dChzdHJpbmcuZm9ybWF0KCIlMDJ1IENDICAiIC4uIGhleCAuLiBoZXgsIGNoYW5uZWwsIGJ1ZmZlcltiYXNlKzJdLCBidWZmZXJbYmFzZSszXSkpCgllbHNlaWYgZXZ0eXBlID09IDEyIHRoZW4KCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiJTAydSBQUkcgIiAuLiBoZXgsIGNoYW5uZWwsIGJ1ZmZlcltiYXNlKzJdKSkKCWVsc2VpZiBldnR5cGUgPT0gMTMgdGhlbgoJCXR4dDpzZXRfdGV4dChzdHJpbmcuZm9ybWF0KCIlMDJ1ICBLUCAiIC4uIGhleCwgY2hhbm5lbCwgYnVmZmVyW2Jhc2UrMl0pKQoJZWxzZWlmIGV2dHlwZSA9PSAxNCB0aGVuCgkJdHh0OnNldF90ZXh0KHN0cmluZy5mb3JtYXQoIiUwMnUgUEJuZCIgLi4gaGV4LCBjaGFubmVsLCBidWZmZXJbYmFzZSsyXSB8IGJ1ZmZlcltiYXNlKzNdIDw8IDcpKQoJZWxzZWlmIHNob3dfc2NtID4gMCB0aGVuIC0tIFN5c3RlbSBDb21tb24gTWVzc2FnZQoJCWxvY2FsIG1lc3NhZ2UgPSBidWZmZXJbYmFzZSArIDFdICYgMTUKCQlpZiBtZXNzYWdlID09IDAgdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFN5c0V4IikKCQllbHNlaWYgbWVzc2FnZSA9PSAxIHRoZW4KCQkJdHh0OnNldF90ZXh0KHN0cmluZy5mb3JtYXQoIi0tIFRpbWUgQ29kZSIgLi4gaGV4LCBidWZmZXJbYmFzZSsyXSkpCgkJZWxzZWlmIG1lc3NhZ2UgPT0gMiB0aGVuCgkJCXR4dDpzZXRfdGV4dChzdHJpbmcuZm9ybWF0KCItLSBTb25nIFBvcyIgLi4gaGV4LCBidWZmZXJbYmFzZSsyXSB8IGJ1ZmZlcltiYXNlKzNdIDw8IDcpKQoJCWVsc2VpZiBtZXNzYWdlID09IDMgdGhlbgoJCQl0eHQ6c2V0X3RleHQoc3RyaW5nLmZvcm1hdCgiLS0gU2VsZWN0IFNvbmciIC4uIGhleCwgYnVmZmVyW2Jhc2UrMl0pKQoJCWVsc2VpZiBtZXNzYWdlID09IDYgdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFR1bmUgUnEiKQoJCWVsc2VpZiBtZXNzYWdlID09IDggdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFRpbWluZyIpCgkJZWxzZWlmIG1lc3NhZ2UgPT0gMTAgdGhlbgoJCQl0eHQ6c2V0X3RleHQoIi0tIFN0YXJ0IikKCQllbHNlaWYgbWVzc2FnZSA9PSAxMSB0aGVuCgkJCXR4dDpzZXRfdGV4dCgiLS0gQ29udGludWUiKQoJCWVsc2VpZiBtZXNzYWdlID09IDEyIHRoZW4KCQkJdHh0OnNldF90ZXh0KCItLSBTdG9wIikKCQllbHNlaWYgbWVzc2FnZSA9PSAxNCB0aGVuCgkJCXR4dDpzZXRfdGV4dCgiLS0gQWN0aXZlIikKCQllbHNlaWYgbWVzc2FnZSA9PSAxNSB0aGVuCgkJCXR4dDpzZXRfdGV4dCgiLS0gUmVzZXQiKQoJCWVsc2UKCQkJcmV0dXJuIGZhbHNlCgkJZW5kCgllbHNlCgkJcmV0dXJuIGZhbHNlCgllbmQKCWN0eDptb3ZlX3RvICh4LCB5KQoJdHh0OnNob3dfaW5fY2Fpcm9fY29udGV4dCAoY3R4KQoJcmV0dXJuIHRydWUKZW5kCgpmdW5jdGlvbiByZW5kZXJfaW5saW5lIChjdHgsIGRpc3BsYXl3aWR0aCwgbWF4X2gpCglsb2NhbCBjdHJsID0gQ3RybFBvcnRzOmFycmF5ICgpCglsb2NhbCBwb3MgPSBzZWxmOnNobWVtKCk6YXRvbWljX2dldF9pbnQoMCkKCWxvY2FsIGJ1ZmZlciA9IHNlbGY6c2htZW0oKTp0b19pbnQoMSk6YXJyYXkoKQoJbG9jYWwgY291bnQgPSBjdHJsWzJdCgoJaWYgbm90IHR4dCBvciBjdXJzaXplIH49IGN0cmxbMV0gdGhlbgoJCWN1cnNpemUgPSBtYXRoLmZsb29yKGN0cmxbMV0pCgkJdHh0ID0gQ2Fpcm8uUGFuZ29MYXlvdXQgKGN0eCwgIk1vbm8gIiAuLiBjdXJzaXplKQoJZW5kCgoJaWYgY3RybFszXSA+IDAgdGhlbiBoZXggPSAiICUwMlgiIGVsc2UgaGV4ID0gIiAlM3UiIGVuZAoJc2hvd19zY20gPSBjdHJsWzRdCgoJaWYgY3RybFs1XSA+IDAgdGhlbgoJCWZvcm1hdF9ub3RlID0gZm9ybWF0X25vdGVfbnVtCgllbHNlCgkJZm9ybWF0X25vdGUgPSBmb3JtYXRfbm90ZV9uYW1lCgllbmQKCgktLSBjb21wdXRlIHRoZSBzaXplIG9mIHRoZSBkaXNwbGF5Cgl0eHQ6c2V0X3RleHQoIjAiKQoJbG9jYWwgXywgbGluZWhlaWdodCA9IHR4dDpnZXRfcGl4ZWxfc2l6ZSgpCglsb2NhbCBkaXNwbGF5aGVpZ2h0ID0gbWF0aC5taW4odnBhZGRpbmcgKyAobGluZWhlaWdodCArIHZwYWRkaW5nKSAqIGNvdW50LCBtYXhfaCkKCgktLSBjb21wdXRlIHN0YXJ0aW5nIHBvc2l0aW9uIChwYW5nbyBhbmNob3JzIHRleHQgYXQgbm9ydGgtd2VzdCBjb3JuZXIpCglsb2NhbCB4LCB5ID0gaHBhZGRpbmcsIGRpc3BsYXloZWlnaHQgLSBsaW5laGVpZ2h0IC0gdnBhZGRpbmcKCgktLSBjbGVhciBiYWNrZ3JvdW5kCgljdHg6cmVjdGFuZ2xlICgwLCAwLCBkaXNwbGF5d2lkdGgsIGRpc3BsYXloZWlnaHQpCgljdHg6c2V0X3NvdXJjZV9yZ2JhICguMiwgLjIsIC4yLCAxLjApCgljdHg6ZmlsbCAoKQoKCS0tIGNvbG9yIG9mIGxhdGVzdCBldmVudAoJY3R4OnNldF9zb3VyY2VfcmdiYSAoMS4wLCAxLjAsIDEuMCwgMS4wKQoKCS0tIHByaW50IGV2ZW50cwoJZm9yIGkgPSBwb3MsIDEsIC0xIGRvCgkJaWYgeSA8IDAgdGhlbiBicmVhayBlbmQKCQlpZiBzaG93X21pZGkoY3R4LCB4LCB5LCBidWZmZXIsIGkpIHRoZW4KCQkJeSA9IHkgLSBsaW5laGVpZ2h0IC0gdnBhZGRpbmcKCQkJY3R4OnNldF9zb3VyY2VfcmdiYSAoLjgsIC44LCAuOCwgMS4wKQoJCWVuZAoJZW5kCglmb3IgaSA9IHJpbmdzaXplLCBwb3MrMSwgLTEgZG8KCQlpZiB5IDwgMCB0aGVuIGJyZWFrIGVuZAoJCWlmIHNob3dfbWlkaShjdHgsIHgsIHksIGJ1ZmZlciwgaSkgdGhlbgoJCQl5ID0geSAtIGxpbmVoZWlnaHQgLSB2cGFkZGluZwoJCQljdHg6c2V0X3NvdXJjZV9yZ2JhICguOCwgLjgsIC44LCAxLjApCgkJZW5kCgllbmQKCglyZXR1cm4ge2Rpc3BsYXl3aWR0aCwgZGlzcGxheWhlaWdodH0KZW5kCg==</script>
+          <Port id="0" value="7"/>
+          <Port id="1" value="6"/>
+          <Port id="2" value="0"/>
+          <Port id="3" value="0"/>
+          <Port id="4" value="0"/>
+        </luaproc>
+        <Controllable name="Font size" id="515" flags="" value="7" parameter="0"/>
+        <Controllable name="Line count" id="516" flags="" value="6" parameter="1"/>
+        <Controllable name="Hexadecimal" id="517" flags="Toggle" value="0" parameter="2"/>
+        <Controllable name="System messages" id="518" flags="Toggle" value="0" parameter="3"/>
+        <Controllable name="Numeric Notes" id="519" flags="Toggle" value="0" parameter="4"/>
+      </Processor>
+      <Processor id="535" name="ACE Reverb" active="1" user-latency="0" use-user-latency="0" type="lv2" unique-id="urn:ardour:a-reverb" count="1" custom="0">
+        <ConfiguredInput>
+          <Channels type="audio" count="1"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredInput>
+        <CustomSinks>
+          <Channels type="audio" count="2"/>
+        </CustomSinks>
+        <ConfiguredOutput>
+          <Channels type="audio" count="1"/>
+          <Channels type="midi" count="1"/>
+        </ConfiguredOutput>
+        <PresetOutput/>
+        <InputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </InputMap-0>
+        <OutputMap-0>
+          <Channelmap type="audio" from="0" to="0"/>
+        </OutputMap-0>
+        <ThruMap/>
+        <lv2 last-preset-uri="" last-preset-label="" parameter-changed-since-last-preset="1" template-dir="/home/manuel/.config/ardour8/templates/CCAutomation">
+          <Port symbol="blend" value="0"/>
+          <Port symbol="roomsz" value="0.5"/>
+          <Port symbol="enable" value="1"/>
+        </lv2>
+        <Controllable name="Blend" id="537" flags="" value="0" parameter="4" symbol="blend"/>
+        <Controllable name="Room Size" id="539" flags="" value="0.5" parameter="5" symbol="roomsz"/>
+        <Controllable name="Enable" id="541" flags="Toggle" value="1" parameter="6" symbol="enable"/>
+      </Processor>
+      <Processor id="454" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+        <Controllable name="gaincontrol" id="428" flags="GainLike" value="0"/>
+      </Processor>
+      <Processor id="458" name="meter-CCConsumer" active="1" user-latency="0" use-user-latency="0" type="meter"/>
+      <Processor id="459" name="CCConsumer" active="1" user-latency="0" use-user-latency="0" own-input="1" own-output="0" output="CCConsumer" type="main-outs" role="Main">
+        <PannerShell bypassed="0" user-panner="" linked-to-route="1"/>
+      </Processor>
+      <Slavable/>
+      <Controllable name="monitor" id="468" flags="RealTime" value="1" monitoring="MonitorInput,MonitorDisk,MonitorCue"/>
+      <Controllable name="rec-safe" id="466" flags="Toggle,RealTime" value="0"/>
+      <Controllable name="rec-enable" id="464" flags="Toggle,RealTime" value="0"/>
+    </Route>
+  </Routes>
+  <Playlists>
+    <Playlist id="290" name="CCProducer.1" type="midi" orig-track-id="212" pgroup-id="" shared-with-ids="" frozen="0"/>
+    <Playlist id="469" name="CCConsumer.1" type="audio" orig-track-id="407" pgroup-id="2025-09-26 17.12.33" shared-with-ids="" frozen="0"/>
+  </Playlists>
+  <UnusedPlaylists/>
+  <RouteGroups/>
+  <Click>
+    <IO name="Click" id="68" direction="Output" default-type="audio">
+      <Port name="Click/audio_out 1" type="audio" direction="Output">
+        <ExtConnection for="JACK"/>
+        <ExtConnection for="JACK" other="Scarlett 18i8 2nd Gen Pro:playback_AUX0"/>
+      </Port>
+      <Port name="Click/audio_out 2" type="audio" direction="Output">
+        <ExtConnection for="JACK"/>
+        <ExtConnection for="JACK" other="Scarlett 18i8 2nd Gen Pro:playback_AUX1"/>
+      </Port>
+    </IO>
+    <Processor id="69" name="Amp" active="1" user-latency="0" use-user-latency="0" type="amp">
+      <Controllable name="gaincontrol" id="67" flags="GainLike" value="1"/>
+    </Processor>
+  </Click>
+  <Speakers>
+    <Speaker azimuth="240" elevation="0" distance="1"/>
+    <Speaker azimuth="120" elevation="0" distance="1"/>
+  </Speakers>
+  <TempoMap superclocks-per-second="282240000">
+    <Tempos>
+      <Tempo npm="120" enpm="120" note-type="4" type="Constant" locked-to-meter="0" continuing="0" active="1" sclock="0" quarters="0:0" bbt="1|1|0" omega="0"/>
+    </Tempos>
+    <Meters>
+      <Meter note-value="4" divisions-per-bar="4" sclock="0" quarters="0:0" bbt="1|1|0"/>
+    </Meters>
+    <MusicTimes/>
+  </TempoMap>
+  <ControlProtocols>
+    <Protocol name="Ableton Push 2" active="0" session-state="0"/>
+    <Protocol name="ContourDesign" active="0" session-state="0"/>
+    <Protocol name="Generic MIDI" feedback="0" feedback-interval="10000" threshold="10" motorized="0" active="1">
+      <Input>
+        <Port name="MIDI Control In" type="midi" direction="Input">
+          <Connection other="CCProducer/midi_out 1"/>
+          <ExtConnection for="JACK"/>
+          <ExtConnection for="JACK" other="Midi-Bridge:Midi Through:(capture_0) Midi Through Port-0"/>
+        </Port>
+      </Input>
+      <Output>
+        <Port name="MIDI Control Out" type="midi" direction="Output">
+          <ExtConnection for="JACK"/>
+          <ExtConnection for="JACK" other="Midi-Bridge:Midi Through:(playback_0) Midi Through Port-0"/>
+        </Port>
+      </Output>
+      <Controls/>
+    </Protocol>
+    <Protocol name="Mackie" feedback="0" bank="0" ipmidi-base="21928" device-profile="User" device-name="Behringer BCF2000" active="0" session-state="0">
+      <Configurations>
+        <Configuration name="Mackie Control Universal Pro">
+          <Surfaces>
+            <Surface name="Mackie Control Universal Pro">
+              <Port>
+                <Input>
+                  <Port name="mackie control in" direction="input"/>
+                </Input>
+                <Output>
+                  <Port name="mackie control out" direction="output"/>
+                </Output>
+              </Port>
+            </Surface>
+          </Surfaces>
+        </Configuration>
+        <Configuration name="Mackie Control">
+          <Surfaces>
+            <Surface name="Mackie Control">
+              <Port>
+                <Input>
+                  <Port name="mackie control in" direction="input"/>
+                </Input>
+                <Output>
+                  <Port name="mackie control out" direction="output"/>
+                </Output>
+              </Port>
+            </Surface>
+          </Surfaces>
+        </Configuration>
+        <Configuration name="Behringer BCF2000">
+          <Surfaces>
+            <Surface name="Behringer BCF2000">
+              <Port>
+                <Input>
+                  <Port name="mackie control in" type="midi" direction="Input"/>
+                </Input>
+                <Output>
+                  <Port name="mackie control out" type="midi" direction="Output"/>
+                </Output>
+              </Port>
+            </Surface>
+          </Surfaces>
+        </Configuration>
+      </Configurations>
+    </Protocol>
+    <Protocol name="Novation Launch Control XL" active="0" session-state="0"/>
+    <Protocol name="Novation LaunchKey 4" active="0" session-state="0"/>
+    <Protocol name="Novation LaunchPad Mini" active="0" session-state="0"/>
+    <Protocol name="Novation LaunchPad Pro" feedback="0" active="0" session-state="0">
+      <Input>
+        <Port name="LaunchPad Pro in" type="midi" direction="Input"/>
+      </Input>
+      <Output>
+        <Port name="LaunchPad Pro out" type="midi" direction="Output"/>
+      </Output>
+      <DAWInput>
+        <Port name="LaunchPad Pro daw in" type="midi" direction="Input"/>
+      </DAWInput>
+      <DAWOutput>
+        <Port name="LaunchPad Pro daw out" type="midi" direction="Output"/>
+      </DAWOutput>
+    </Protocol>
+    <Protocol name="Novation LaunchPad X" active="0" session-state="0"/>
+    <Protocol name="Open Sound Control (OSC)" active="0" session-state="0"/>
+    <Protocol name="PreSonus FaderPort" active="0" session-state="0"/>
+    <Protocol name="PreSonus FaderPort16" active="0" session-state="0"/>
+    <Protocol name="PreSonus FaderPort2" active="0" session-state="0"/>
+    <Protocol name="PreSonus FaderPort8" active="0" session-state="0"/>
+    <Protocol name="SSL 360: UF8 UF1" active="0" session-state="0"/>
+    <Protocol name="Softube Console1" active="0" session-state="0"/>
+    <Protocol name="Steinberg CC121" active="0" session-state="0"/>
+    <Protocol name="Tascam US-2400" active="0" session-state="0"/>
+    <Protocol name="WebSockets Server (Experimental)" feedback="0" active="0" session-state="0"/>
+  </ControlProtocols>
+  <Extra>
+    <AddRouteDialog LastRouteType="AudioTrack"/>
+    <UI>
+      <Window name="key-editor" visible="0" x-off="81" y-off="370" x-size="857" y-size="988"/>
+      <Window name="session-options-editor" visible="0" x-off="0" y-off="250" x-size="1002" y-size="513"/>
+      <Window name="speaker-config" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="about" visible="0" x-off="0" y-off="0" x-size="424" y-size="652"/>
+      <Window name="add-routes" visible="0" x-off="-1" y-off="-1" x-size="999" y-size="528"/>
+      <Window name="add-video" visible="0" x-off="0" y-off="148" x-size="1300" y-size="492"/>
+      <Window name="inspector" visible="0" x-off="129" y-off="253" x-size="620" y-size="370"/>
+      <Window name="audio-midi-setup" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="video-export" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="script-manager" visible="0" x-off="503" y-off="654" x-size="785" y-size="602"/>
+      <Window name="bundle-manager" visible="0" x-off="194" y-off="327" x-size="480" y-size="240"/>
+      <Window name="locations" visible="0" x-off="244" y-off="0" x-size="342" y-size="516"/>
+      <Window name="big-clock" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="big-transport" visible="0" x-off="249" y-off="244" x-size="840" y-size="140"/>
+      <Window name="virtual-keyboard" visible="0" x-off="60" y-off="183" x-size="759" y-size="204"/>
+      <Window name="library-downloader" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="audio-connection-manager" visible="0" x-off="176" y-off="0" x-size="589" y-size="841"/>
+      <Window name="midi-connection-manager" visible="0" x-off="1883" y-off="122" x-size="1359" y-size="1196"/>
+      <Window name="luawindow" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="idle-o-meter" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="io-plugins" visible="0" x-off="73" y-off="400" x-size="600" y-size="224"/>
+      <Window name="plugin-manager" visible="0" x-off="1662" y-off="568" x-size="1778" y-size="790"/>
+      <Window name="plugin-dsp-load" visible="0" x-off="381" y-off="660" x-size="1258" y-size="1136"/>
+      <Window name="dsp-statistics" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="transport-masters" visible="0" x-off="0" y-off="431" x-size="2157" y-size="302"/>
+      <Window name="RPM-71" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-212" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-212-322" visible="1" x-off="958" y-off="246" x-size="1842" y-size="1041" custom-ui="1"/>
+      <Window name="PM-212-322" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="RPM-407" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-212-489" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
+      <Window name="PM-212-489" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-407-526" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1" custom-ui="1"/>
+      <Window name="PM-407-526" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <Window name="P-407-535" visible="1" x-off="953" y-off="113" x-size="577" y-size="270" custom-ui="0"/>
+      <Window name="PM-407-535" visible="0" x-off="-1" y-off="-1" x-size="-1" y-size="-1"/>
+      <GUIObjectState>
+        <Object id="rtav 71" height="84"/>
+        <Object id="automation 75" height="84" visible="0"/>
+        <Object id="automation 77" height="84" visible="0"/>
+        <Object id="automation 71 12/0/0" height="84" visible="0"/>
+        <Object id="automation 90" height="84" visible="0"/>
+        <Object id="strip 71">
+          <Object id="processor 101">
+            <Object id="control 75" visible="0"/>
+          </Object>
+        </Object>
+        <Object id="rtav 212" height="84" midnam-custom-device-mode="General MIDI" note-range-min="60" note-range-max="71" color-mode="MeterColors" midnam-channel="Channel  1"/>
+        <Object id="automation 249" height="84" visible="0"/>
+        <Object id="automation 212 12/0/0" height="84" visible="0"/>
+        <Object id="automation 212 32/0/0" height="84" visible="0"/>
+        <Object id="strip 212">
+          <Object id="processor 275">
+            <Object id="control 249" visible="0"/>
+          </Object>
+          <Object id="processor 322">
+            <Object id="control 324" visible="0"/>
+            <Object id="control 326" visible="0"/>
+            <Object id="control 328" visible="0"/>
+            <Object id="control 330" visible="0"/>
+            <Object id="control 332" visible="0"/>
+            <Object id="control 334" visible="0"/>
+            <Object id="control 336" visible="0"/>
+            <Object id="control 338" visible="0"/>
+            <Object id="control 340" visible="0"/>
+            <Object id="control 342" visible="0"/>
+            <Object id="control 344" visible="0"/>
+            <Object id="control 346" visible="0"/>
+            <Object id="control 348" visible="0"/>
+            <Object id="control 350" visible="0"/>
+            <Object id="control 352" visible="0"/>
+            <Object id="control 354" visible="0"/>
+            <Object id="control 356" visible="0"/>
+            <Object id="control 358" visible="0"/>
+            <Object id="control 360" visible="0"/>
+            <Object id="control 362" visible="0"/>
+            <Object id="control 364" visible="0"/>
+            <Object id="control 366" visible="0"/>
+            <Object id="control 368" visible="0"/>
+            <Object id="control 370" visible="0"/>
+            <Object id="control 372" visible="0"/>
+            <Object id="control 374" visible="0"/>
+            <Object id="control 376" visible="0"/>
+            <Object id="control 378" visible="0"/>
+            <Object id="control 380" visible="0"/>
+            <Object id="control 382" visible="0"/>
+            <Object id="control 384" visible="0"/>
+            <Object id="control 386" visible="0"/>
+          </Object>
+          <Object id="processor 489">
+            <Object id="control 491" visible="0"/>
+            <Object id="control 493" visible="0"/>
+            <Object id="control 495" visible="0"/>
+            <Object id="control 497" visible="0"/>
+            <Object id="control 499" visible="0"/>
+            <Object id="InlineDisplay" visible="1"/>
+          </Object>
+        </Object>
+        <Object id="automation 264" height="84" visible="0"/>
+        <Object id="rtav 407" height="84"/>
+        <Object id="automation 428" height="84" visible="1"/>
+        <Object id="automation 430" height="84" visible="0"/>
+        <Object id="automation 407 12/0/0" height="84" visible="0"/>
+        <Object id="automation 443" height="84" visible="0"/>
+        <Object id="strip 407">
+          <Object id="processor 454">
+            <Object id="control 428" visible="0"/>
+          </Object>
+          <Object id="processor 526">
+            <Object id="control 515" visible="0"/>
+            <Object id="control 516" visible="0"/>
+            <Object id="control 517" visible="0"/>
+            <Object id="control 518" visible="0"/>
+            <Object id="control 519" visible="0"/>
+            <Object id="InlineDisplay" visible="1"/>
+          </Object>
+          <Object id="processor 535">
+            <Object id="control 537" visible="1"/>
+            <Object id="control 539" visible="0"/>
+            <Object id="control 541" visible="0"/>
+          </Object>
+        </Object>
+        <Object id="automation 537" height="84" visible="1"/>
+      </GUIObjectState>
+    </UI>
+    <Videomonitor active="0"/>
+  </Extra>
+  <Script lua="Lua 5.3">c2NyaXB0cyA9IHt9IA==</Script>
+  <IOPlugins/>
+  <description>Generate 2 Random Walk CC values in Cardinal Synth 
+
+Using qpwgraph, connect ports like this:
+
+CCProducer/midi_out 1  &gt;&gt;
+MIDI Through port 0_in &gt;&gt;
+MIDI Through port 0_out &gt;&gt;
+ardour/Midi Control  In  &gt;&gt;
+ardour/Midi Control Out &gt;&gt;
+MIDI Through port 0_in  &gt;&gt;
+MIDI Through port 0_out &gt;&gt;
+CCConsumer/midi_in 1
+
+Make sure to set Automation mode to Tough or Write</description>
+</Session>
